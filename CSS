@@ -1,0 +1,164 @@
+/* --- CUSTOMIZE YOUR DESIGN HERE --- */
+:root {
+    --primary-color: #4a5c50; /* Sage Green */
+    --accent-color: #d4af37;  /* Gold */
+    --bg-color: #faf9f6;      /* Off-white */
+    --text-color: #333333;
+    
+    /* Change fonts here! Must be imported in HTML head */
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* NAVIGATION TABS */
+nav {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.nav-links li { margin: 0 15px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* SECTIONS */
+.tab-content {
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block; /* Shows when active */
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* HERO SECTION */
+.hero {
+    /* Add your hero image URL here! */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/1200x800?text=Add+Hero+Image+in+CSS') center/cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* BUTTONS & FORMS */
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--heading-font);
+    transition: background 0.3s;
+}
+
+.btn:hover { background-color: var(--text-color); }
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--body-font);
+}
+
+.deal-box {
+    background-color: #fcf8e3;
+    border-left: 5px solid var(--accent-color);
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { flex-direction: column; align-items: center; }
+    .nav-links li { margin: 5px 0; }
+}
