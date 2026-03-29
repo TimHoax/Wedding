@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Easy Font Customization via Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation / Tabs -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#" class="tab-link active" data-target="home">Home</a></li>
+            <li><a href="#" class="tab-link" data-target="story">Our Story</a></li>
+            <li><a href="#" class="tab-link" data-target="schedule">Schedule</a></li>
+            <li><a href="#" class="tab-link" data-target="accommodation">Accommodation</a></li>
+            <li><a href="#" class="tab-link" data-target="rsvp">RSVP</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME TAB -->
+    <section id="home" class="tab-content active">
+        <div class="hero">
+            <!-- Replace with your own image URL in CSS -->
+            <h1>Alex & Taylor</h1>
+            <p class="subtitle">September 12, 2026 • The Grand Estate, NY</p>
+            <button class="btn" onclick="document.querySelector('[data-target=\'rsvp\']').click()">RSVP Now</button>
+        </div>
+    </section>
+
+    <!-- OUR STORY TAB -->
+    <section id="story" class="tab-content container">
+        <h2>Our Story</h2>
+        <p>We met at a coffee shop in 2018, and the rest is history. We are so excited to celebrate our special day with all of our favorite people!</p>
+        <!-- Add your image here -->
+        <img src="https://via.placeholder.com/800x400?text=Your+Couple+Photo+Here" alt="Alex and Taylor" class="responsive-img">
+    </section>
+
+    <!-- SCHEDULE TAB -->
+    <section id="schedule" class="tab-content container">
+        <h2>Timeline of Events</h2>
+        <div class="event">
+            <h3>Friday, Sept 11</h3>
+            <p><strong>6:00 PM:</strong> Welcome Drinks & Rehearsal Dinner</p>
+        </div>
+        <div class="event">
+            <h3>Saturday, Sept 12</h3>
+            <p><strong>4:00 PM:</strong> Ceremony</p>
+            <p><strong>5:30 PM:</strong> Cocktails</p>
+            <p><strong>7:00 PM:</strong> Reception & Dancing</p>
+        </div>
+        <div class="event">
+            <h3>Sunday, Sept 13</h3>
+            <p><strong>10:00 AM:</strong> Farewell Brunch</p>
+        </div>
+    </section>
+
+    <!-- ACCOMMODATION TAB -->
+    <section id="accommodation" class="tab-content container">
+        <h2>Accommodation & Directions</h2>
+        <p><strong>The Grand Estate Hotel</strong><br>123 Wedding Lane, New York, NY</p>
+        <div class="deal-box">
+            <h3>✨ Special Offer: Stay 2 Nights, Get the 3rd Free! ✨</h3>
+            <p>We want you to enjoy the whole weekend with us. If you book Friday and Saturday night, Sunday night is on us! Just select your nights in the RSVP form.</p>
+        </div>
+        <p><strong>Directions:</strong> We are located 45 minutes from the Main Airport. Shuttles will be provided.</p>
+    </section>
+
+    <!-- RSVP TAB -->
+    <section id="rsvp" class="tab-content container">
+        <h2>RSVP</h2>
+        <p>Please let us know if you can make it by July 1st, 2026.</p>
+        
+        <!-- REPLACE YOUR_FORMSPREE_ID when you sign up for Formspree -->
+        <form action="https://formspree.io/f/xzdkeyvq" method="POST" id="rsvp-form">
+            
+            <label>Full Name(s):</label>
+            <input type="text" name="name" required>
+
+            <label>Email Address:</label>
+            <input type="email" name="email" required>
+
+            <label>Will you be attending?</label>
+            <select name="attending" id="attending-select" required>
+                <option value="">-- Please Select --</option>
+                <option value="Yes">Joyfully Accepts</option>
+                <option value="No">Regretfully Declines</option>
+            </select>
+
+            <!-- Conditional Accommodation Section -->
+            <div id="accommodation-section" style="display: none; margin-top: 20px;">
+                <label>Will you be staying at the Hotel?</label>
+                <select name="staying_at_hotel" id="hotel-select">
+                    <option value="No">No, I have other arrangements</option>
+                    <option value="Yes">Yes, I'd like to book rooms</option>
+                </select>
+
+                <div id="nights-section" style="display: none; margin-top: 15px; padding: 15px; background: #f9f9f9; border-radius: 5px;">
+                    <p><strong>Select your nights:</strong></p>
+                    <label><input type="checkbox" name="night_friday" id="friday" value="Yes"> Friday Night (Sept 11)</label><br>
+                    <label><input type="checkbox" name="night_saturday" id="saturday" value="Yes"> Saturday Night (Sept 12)</label><br>
+                    <label><input type="checkbox" name="night_sunday" id="sunday" value="Yes"> Sunday Night (Sept 13)</label><br>
+                    
+                    <div id="discount-message" style="display: none; color: #27ae60; margin-top: 10px; font-weight: bold;">
+                        🎉 3rd Night Free Activated! You will not be charged for Sunday night.
+                    </div>
+                </div>
+            </div>
+
+            <label>Dietary Restrictions / Song Requests:</label>
+            <textarea name="notes" rows="4"></textarea>
+
+            <button type="submit" class="btn">Submit RSVP</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
