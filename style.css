@@ -168,13 +168,13 @@ input[type="text"], input[type="email"], select, textarea {
 .map-container {
     margin: 20px 0;
     border-radius: 8px;
-    overflow: hidden; /* Keeps the map inside the rounded corners */
+    overflow: hidden; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border: 2px solid var(--accent-color); /* Optional: adds a nice gold border around the map */
+    border: 2px solid var(--accent-color); 
 }
 
 .map-container iframe {
-    display: block;  /* This removes the weird white space at the bottom */
+    display: block;  
     width: 100%;
     margin: 0;
     padding: 0;
