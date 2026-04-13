@@ -172,3 +172,10 @@ input[type="text"], input[type="email"], select, textarea {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border: 2px solid var(--accent-color); /* Optional: adds a nice gold border around the map */
 }
+
+.map-container iframe {
+    display: block;  /* This removes the weird white space at the bottom */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
