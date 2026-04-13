@@ -162,3 +162,12 @@ input[type="text"], input[type="email"], select, textarea {
     .nav-links { flex-direction: column; align-items: center; }
     .nav-links li { margin: 5px 0; }
 }
+
+/* MAP CONTAINER */
+.map-container {
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden; /* Keeps the map inside the rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid var(--accent-color); /* Optional: adds a nice gold border around the map */
+}
