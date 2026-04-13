@@ -1,11 +1,11 @@
-/* --- CUSTOMIZE YOUR DESIGN HERE --- */
+/* --- FYNBOS & PROTEA COLOR SCHEME --- */
 :root {
-    --primary-color: #4a5c50; /* Sage Green */
-    --accent-color: #d4af37;  /* Gold */
-    --bg-color: #faf9f6;      /* Off-white */
-    --text-color: #333333;
+    --primary-color: #5c6b54; /* Fynbos Green (Muted, earthy olive/sage) */
+    --accent-color: #b56a73;  /* Protea Pink (Dusty, elegant rose/coral) */
+    --bg-color: #fbf9f6;      /* Warm Stone (A soft, natural off-white) */
+    --text-color: #3b312b;    /* Deep Bark (A soft, earthy dark brown instead of harsh black) */
     
-    /* Change fonts here! Must be imported in HTML head */
+    /* Fonts */
     --heading-font: 'Playfair Display', serif;
     --body-font: 'Lato', sans-serif;
 }
@@ -59,7 +59,7 @@ nav {
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: var(--primary-color);
+    color: var(--accent-color); /* Changes active text to Protea Pink */
     font-weight: bold;
     border-bottom: 2px solid var(--accent-color);
 }
@@ -139,10 +139,11 @@ input[type="text"], input[type="email"], select, textarea {
 }
 
 .deal-box {
-    background-color: #fcf8e3;
-    border-left: 5px solid var(--accent-color);
+    background-color: #f4ecee; /* Soft blush pink background */
+    border-left: 5px solid var(--accent-color); /* Protea pink border */
     padding: 15px;
     margin: 20px 0;
+    border-radius: 0 4px 4px 0;
 }
 
 .responsive-img {
