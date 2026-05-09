@@ -10,6 +10,20 @@
 </head>
 <body>
 
+    <!-- THE PASSWORD SCREEN -->
+    <div id="password-overlay">
+        <div class="password-box">
+            <h2>Welcome</h2>
+            <p>Please enter the guest password to view our wedding website.</p>
+            <input type="password" id="guest-password" placeholder="Enter Password">
+            <button onclick="checkPassword()" class="btn">Enter</button>
+            <p id="password-error" style="display: none; color: red; margin-top: 10px;">Incorrect password. Try again!</p>
+        </div>
+    </div>
+
+    <!-- WRAP THE REST OF THE SITE IN THIS DIV -->
+    <div id="main-website" style="display: none;">
+    
     <!-- Navigation / Tabs -->
     <nav>
         <ul class="nav-links">
@@ -132,7 +146,9 @@
             <button type="submit" class="btn">Submit RSVP</button>
         </form>
     </section>
-
+        
+    </div> <!-- Close the main-website div right before the closing </body> tag -->
+    
     <script src="script.js"></script>
 </body>
 </html>
