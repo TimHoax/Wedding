@@ -83,3 +83,28 @@ document.addEventListener("DOMContentLoaded", () => {
     friday.addEventListener("change", checkDiscount);
     saturday.addEventListener("change", checkDiscount);
 });
+
+// --- 3. PASSWORD PROTECTION LOGIC ---
+function checkPassword() {
+    const input = document.getElementById("guest-password").value;
+    
+    // CHANGE YOUR PASSWORD HERE (It is case-sensitive!)
+    const correctPassword = "Fynbos2026"; 
+
+    if (input === correctPassword) {
+        // Hide the password screen and show the website
+        document.getElementById("password-overlay").style.display = "none";
+        document.getElementById("main-website").style.display = "block";
+    } else {
+        // Show error message
+        document.getElementById("password-error").style.display = "block";
+    }
+}
+
+// Allow guests to press "Enter" on their keyboard to submit the password
+document.getElementById("guest-password").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        checkPassword();
+    }
+});
