@@ -1,33 +1,3 @@
-To do this, we are going to use a very clean trick. We will tell your JavaScript to instantly swap the website's background whenever you click on any tab that isn't the Home tab.
-
-This gives the rest of your website a beautiful, textured look while keeping the Home page focused on your main Hero photograph.
-
-Here is exactly what you need to update in two of your files.
-Step 1: Update style.css
-
-Open your style.css file and scroll to the bottom. Add this new code.
-
-(Note: I added background-attachment: fixed;. This is a premium design trick so that when guests scroll down to read your Schedule or RSVP, the text boxes glide smoothly over the background image without the image moving!)
-code CSS
-
-/* --- INNER PAGE BACKGROUND --- */
-body.inner-page-bg {
-    /* Put your background image link here! (I added a soft, muted mountain/nature texture as a placeholder) */
-    background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Creates a beautiful parallax gliding effect */
-}
-
-Step 2: Update script.js
-
-Now we just need to tell the tabs to trigger that background image.
-
-Open your script.js file and look at the very top section (the // --- 1. TAB SWITCHING LOGIC --- part).
-
-Replace that entire first block with this updated version:
-code JavaScript
-
 document.addEventListener("DOMContentLoaded", () => {
     
     // --- 1. TAB SWITCHING LOGIC ---
