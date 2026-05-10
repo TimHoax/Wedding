@@ -95,18 +95,27 @@ nav {
 }
 
 /* HERO SECTION */
+/* HERO SECTION */
 .hero {
-    /* Add your hero image URL here! */
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero1.jpg') center/cover;
-    height: 80vh;
+    /* NOTICE "top center/cover" - This forces the top of the photo to never be cut off! */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1528699632204-7c26df5ed6e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') top center/cover;
+    
+    /* Makes the photo take up the full front page */
+    min-height: calc(100vh - 60px); 
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    
+    /* Keeps it neatly layered */
+    position: relative;
+    z-index: 2;
 }
 
+/* Optional: Pushes your text up just a tiny bit so it's perfectly centered in the new massive space */
 .hero h1 {
     font-size: 4rem;
     color: white;
@@ -225,4 +234,12 @@ body.inner-page-bg {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Creates a beautiful parallax gliding effect */
+}
+
+/* FORM SUBMIT BUTTON SPACING */
+#rsvp-form .btn {
+    margin-top: 30px; /* Pushes the button down away from the song request */
+    width: 100%;      /* Makes the button span the full width of the form */
+    font-size: 1.1rem;
+    padding: 15px;    /* Makes it a nice, tall, clickable button */
 }
