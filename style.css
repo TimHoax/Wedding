@@ -95,7 +95,6 @@ nav {
 }
 
 /* HERO SECTION */
-/* HERO SECTION */
 .hero {
     /* NOTICE "top center/cover" - This forces the top of the photo to never be cut off! */
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero3.jpeg') top center/cover;
@@ -149,13 +148,27 @@ form label {
     font-weight: bold;
 }
 
-input[type="text"], input[type="email"], select, textarea {
+/* FORM INPUTS UNIFORM STYLING */
+input[type="text"], input[type="email"], select, textarea, input[type="password"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    
+    /* These 3 lines force the text to be identical across all boxes */
     font-family: var(--body-font);
+    font-size: 1rem; 
+    color: var(--text-color);
+    
+    box-sizing: border-box;
+}
+
+/* Forces the grey placeholder text to match perfectly too */
+::placeholder {
+    color: #888;
+    font-family: var(--body-font);
+    font-size: 0.95rem;
 }
 
 .deal-box {
