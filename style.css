@@ -79,10 +79,19 @@ nav {
 .container {
     max-width: 800px;
     margin: 40px auto;
-    padding: 20px;
-    background: white;
+    padding: 30px; /* Made the padding slightly bigger so the text breathes nicely */
+    
+    /* THE TRANSPARENCY: 255, 255, 255 is white. The 0.85 is the transparency (85%). Change to 0.7 for more see-through, or 0.9 for less! */
+    background: rgba(255, 255, 255, 0.85); 
+    
+    /* FROSTED GLASS EFFECT: Slightly blurs the background right behind the box to keep text readable */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* Needed for iPhones/Safari */
+    
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Slightly softer shadow */
+    position: relative; 
+    z-index: 2;         
 }
 
 /* HERO SECTION */
