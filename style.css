@@ -222,7 +222,7 @@ input[type="text"], input[type="email"], select, textarea {
 .border-left {
     left: 0;
     /* Replace this URL with your transparent PNG of a Protea/Fynbos arrangement */
-    background-image: url('images/left-floral.png'); 
+    background-image: url('border1.png'); 
     background-position: left center;
 }
 
