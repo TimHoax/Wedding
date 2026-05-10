@@ -116,13 +116,13 @@
         <p>We are currently in the process of confirming RSVP numbers to support our planning. Once these have been finalised, we will share further details regarding on-site and off-site accommodation booking options.</p>
     </section>
 
-    <!-- RSVP TAB -->
+<!-- RSVP TAB -->
     <section id="rsvp" class="tab-content container">
-        <h2>RSVP</h2>
-  <p style="text-align: center; margin-bottom: 25px;">Please RSVP by 1 July 2026 at the latest, although if you already know you’re coming to celebrate with us (or not), we’d really appreciate hearing from you sooner.</p>
+        <h2 style="text-align: center;">RSVP</h2>
+        <p style="text-align: center; margin-bottom: 25px;">Please RSVP by 1 July 2026 at the latest, although if you already know you’re coming to celebrate with us (or not), we’d really appreciate hearing from you sooner.</p>
         
         <!-- REPLACE YOUR_FORMSPREE_ID when you sign up for Formspree -->
-        <form action="https://formspree.io/f/xzdkeyvq" method="POST" id="rsvp-form">
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="rsvp-form">
             
             <label>Full Name(s):</label>
             <input type="text" name="name" required>
@@ -137,32 +137,14 @@
                 <option value="No">Regretfully Declines</option>
             </select>
 
-            <!-- Conditional Accommodation Section -->
-            <div id="accommodation-section" style="display: none; margin-top: 20px;">
-                <label>Will you be staying at the Hotel?</label>
-                <select name="staying_at_hotel" id="hotel-select">
-                    <option value="No">No, I have other arrangements</option>
-                    <option value="Yes">Yes, I'd like to book rooms</option>
-                </select>
+            <!-- Dietary & Song Sections (Hidden until they select "Yes") -->
+            <div id="extra-questions" style="display: none; margin-top: 15px;">
+                <label>Dietary Requirements:</label>
+                <textarea name="dietary_requirements" rows="2" placeholder="Please list any allergies or restrictions"></textarea>
 
-                <div id="nights-section" style="display: none; margin-top: 15px; padding: 15px; background: #f9f9f9; border-radius: 5px;">
-                    <p><strong>Select your nights:</strong></p>
-                    <label><input type="checkbox" name="night_friday" id="friday" value="Yes"> Friday Night (Sept 11)</label><br>
-                    <label><input type="checkbox" name="night_saturday" id="saturday" value="Yes"> Saturday Night (Sept 12)</label><br>
-                    <label><input type="checkbox" name="night_sunday" id="sunday" value="Yes"> Sunday Night (Sept 13)</label><br>
-                    
-                    <div id="discount-message" style="display: none; color: #27ae60; margin-top: 10px; font-weight: bold;">
-                        🎉 3rd Night Free Activated! You will not be charged for Sunday night.
-                    </div>
-                </div>
+                <label>What song will get you on the dancefloor?</label>
+                <input type="text" name="song_request" placeholder="Song title & artist">
             </div>
-
-<!-- Dietary & Song Sections -->
-            <label>Dietary Requirements:</label>
-            <textarea name="dietary_requirements" rows="2" placeholder="Please list any allergies or restrictions"></textarea>
-
-            <label>What song will get you on the dancefloor?</label>
-            <input type="text" name="song_request" placeholder="Song title & artist">
 
             <button type="submit" class="btn">Submit RSVP</button>
         </form>
