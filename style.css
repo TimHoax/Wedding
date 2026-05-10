@@ -275,3 +275,22 @@ body.inner-page-bg {
     font-size: 1.1rem;
     padding: 15px;    /* Makes it a nice, tall, clickable button */
 }
+
+/* --- FAQ SECTION --- */
+.faq-item {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05); /* Adds a very faint dividing line between questions */
+}
+
+.faq-item:last-child {
+    border-bottom: none; /* Removes the line under the very last question */
+}
+
+.faq-item h3 {
+    font-size: 1.15rem;
+    color: var(--primary-color); /* Uses your Fynbos green */
+    margin-bottom: 5px;
+    font-family: var(--body-font);
+    font-weight: bold;
+}
