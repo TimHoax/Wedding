@@ -222,14 +222,14 @@ input[type="text"], input[type="email"], select, textarea {
 .border-left {
     left: 0;
     /* Replace this URL with your transparent PNG of a Protea/Fynbos arrangement */
-    background-image: url('border1.png'); 
+    background-image: url('images/border1.png'); 
     background-position: left center;
 }
 
 .border-right {
     right: 0;
     /* Replace this URL with your transparent PNG */
-    background-image: url('border1.png');
+    background-image: url('images/border1.png');
     background-position: right center;
     /* This flips the left image so it perfectly mirrors on the right! */
     transform: scaleX(-1); 
