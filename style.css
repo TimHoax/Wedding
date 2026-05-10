@@ -210,7 +210,7 @@ input[type="text"], input[type="email"], select, textarea {
 /* --- INNER PAGE BACKGROUND --- */
 body.inner-page-bg {
     /* Put your background image link here! (I added a soft, muted mountain/nature texture as a placeholder) */
-    background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-image: url('images/background2.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Creates a beautiful parallax gliding effect */
