@@ -86,7 +86,7 @@ nav {
 /* HERO SECTION */
 .hero {
     /* Add your hero image URL here! */
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/1200x800?text=Add+Hero+Image+in+CSS') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero1.jpg') center/cover;
     height: 80vh;
     display: flex;
     flex-direction: column;
