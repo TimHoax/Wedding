@@ -17,6 +17,73 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetId = link.getAttribute("data-target");
             document.getElementById(targetId).classList.add("active");
             
+            // BACKGROUND IMAGE LOGIC
+            if (targetId === "home") {
+                document.body.classList.remove("inner-page-bg");
+            } else {
+                document.body.classList.add("inner-page-bg");
+            }
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+
+    // --- 2. RSVP LOGIC (Show/Hide extra questions) ---
+    const attendingSelect = document.getElementById("attending-select");
+    const extraQuestions = document.getElementById("extra-questions");
+
+    attendingSelect.addEventListener("change", (e) => {
+        if (e.target.value === "Yes") {
+            extraQuestions.style.display = "block"; // Show questions if attending
+        } else {
+            extraQuestions.style.display = "none";  // Hide if declining or empty
+        }
+    });
+});
+
+// --- 3. PASSWORD PROTECTION LOGIC ---
+function checkPassword() {
+    const input = document.getElementById("guest-password").value;
+    
+    // CHANGE YOUR PASSWORD HERE (It is case-sensitive!)
+    const correctPassword = "Fynbos2026"; 
+
+    if (input === correctPassword) {
+        // Hide the password screen and show the website
+        document.getElementById("password-overlay").style.display = "none";
+        document.getElementById("main-website").style.display = "block";
+    } else {
+        // Show error message
+        document.getElementById("password-error").style.display = "block";
+    }
+}
+
+// Allow guests to press "Enter" on their keyboard to submit the password
+document.getElementById("guest-password").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        checkPassword();
+    }
+});document.addEventListener("DOMContentLoaded", () => {
+    
+    // --- 1. TAB SWITCHING LOGIC ---
+    const tabLinks = document.querySelectorAll(".tab-link");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            
+            // Remove active class from all links and content
+            tabLinks.forEach(l => l.classList.remove("active"));
+            tabContents.forEach(c => c.classList.remove("active"));
+            
+            // Add active class to clicked link and corresponding content
+            link.classList.add("active");
+            const targetId = link.getAttribute("data-target");
+            document.getElementById(targetId).classList.add("active");
+            
             // ---> NEW: BACKGROUND IMAGE LOGIC <---
             if (targetId === "home") {
                 // If it's the Home tab, remove the background image
