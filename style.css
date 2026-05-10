@@ -97,7 +97,7 @@ nav {
 /* HERO SECTION */
 .hero {
     /* NOTICE "top center/cover" - This forces the top of the photo to never be cut off! */
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero3.jpeg') top center/cover;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero4.jpeg') top center/cover;
     
     /* Makes the photo take up the full front page */
     min-height: calc(100vh - 60px); 
