@@ -114,17 +114,22 @@ nav {
     z-index: 2;
 }
 
-/* Optional: Pushes your text up just a tiny bit so it's perfectly centered in the new massive space */
+/* HERO TEXT WITH SUBTLE SHADOW */
 .hero h1 {
     font-size: 4rem;
     color: white;
     margin-bottom: 5px;
+    /* Soft, elegant shadow: x-offset, y-offset, blur-radius, color */
+    text-shadow: 0px 3px 12px rgba(0, 0, 0, 0.6); 
 }
 
 .hero .subtitle {
     font-size: 1.2rem;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    color: white;
+    /* Slightly tighter shadow for the smaller text so it stays crisp */
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8); 
 }
 
 /* BUTTONS & FORMS */
