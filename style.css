@@ -82,7 +82,7 @@ nav {
     padding: 30px; /* Made the padding slightly bigger so the text breathes nicely */
     
     /* THE TRANSPARENCY: 255, 255, 255 is white. The 0.85 is the transparency (85%). Change to 0.7 for more see-through, or 0.9 for less! */
-    background: rgba(255, 255, 255, 0.85); 
+    background: rgba(255, 255, 255, 0.7); 
     
     /* FROSTED GLASS EFFECT: Slightly blurs the background right behind the box to keep text readable */
     backdrop-filter: blur(5px);
