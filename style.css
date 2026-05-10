@@ -1,5 +1,7 @@
 /* --- FYNBOS & PROTEA COLOR SCHEME --- */
 :root {
+   color-scheme: light; /* <--- ADD THIS LINE HERE */
+    
     --primary-color: #5c6b54; /* Fynbos Green (Muted, earthy olive/sage) */
     --accent-color: #b56a73;  /* Protea Pink (Dusty, elegant rose/coral) */
     --bg-color: #fbf9f6;      /* Warm Stone (A soft, natural off-white) */
