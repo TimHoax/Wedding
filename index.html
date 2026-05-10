@@ -30,11 +30,12 @@
     <nav>
         <ul class="nav-links">
             <li><a href="#" class="tab-link active" data-target="home">Home</a></li>
+            <li><a href="#" class="tab-link" data-target="rsvp">RSVP</a></li>
             <li><a href="#" class="tab-link" data-target="story">Our Story</a></li>
             <li><a href="#" class="tab-link" data-target="schedule">Schedule</a></li>
             <li><a href="#" class="tab-link" data-target="location">Location</a></li> 
             <li><a href="#" class="tab-link" data-target="accommodation">Accommodation</a></li>
-            <li><a href="#" class="tab-link" data-target="rsvp">RSVP</a></li>
+            
         </ul>
     </nav>
 
@@ -48,6 +49,10 @@
         </div>
     </section>
 
+            <!-- OUR STORY TAB -->
+    <section id="story" class="tab-content container">
+        <h2>Our Story</h2>
+    </section>
 
     <!-- SCHEDULE TAB -->
     <section id="schedule" class="tab-content container">
@@ -80,7 +85,7 @@
         </div>
 
         <h3>Parking & Directions</h3>
-        <p>Parking is available on the estate. Since it is a mountain location, we recommend downloading your map offline before driving up, as cell service can sometimes be spotty!</p>
+        <p>Detailed directions to be provided to those who have RSVPed.</p>
     </section>
     
     <!-- ACCOMMODATION TAB -->
@@ -135,8 +140,12 @@
                 </div>
             </div>
 
-            <label>Dietary Restrictions / Song Requests:</label>
-            <textarea name="notes" rows="4"></textarea>
+<!-- Dietary & Song Sections -->
+            <label>Dietary Requirements:</label>
+            <textarea name="dietary_requirements" rows="2" placeholder="Please list any allergies or restrictions"></textarea>
+
+            <label>What song will get you on the dancefloor?</label>
+            <input type="text" name="song_request" placeholder="Song title & artist">
 
             <button type="submit" class="btn">Submit RSVP</button>
         </form>
