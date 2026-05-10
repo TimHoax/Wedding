@@ -229,7 +229,7 @@ input[type="text"], input[type="email"], select, textarea {
 .border-right {
     right: 0;
     /* Replace this URL with your transparent PNG */
-    background-image: url('images/border2.png');
+    background-image: url('images/border1.png');
     background-position: right center;
     /* This flips the left image so it perfectly mirrors on the right! */
     transform: scaleX(-1); 
