@@ -98,7 +98,7 @@ function checkPassword() {
     const input = document.getElementById("guest-password").value;
     
     // CHANGE YOUR PASSWORD HERE (It is case-sensitive!)
-    const correctPassword = "Fynbos2026"; 
+    const correctPassword = "Meraki"; 
 
     if (input === correctPassword) {
         // Hide the password screen and show the website
