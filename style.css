@@ -206,3 +206,38 @@ input[type="text"], input[type="email"], select, textarea {
     text-align: center;
     font-size: 1.1rem;
 }
+
+/* --- FIXED SIDE BORDERS --- */
+.side-border {
+    position: fixed;
+    top: 0;
+    width: 200px;  /* How wide the floral border is */
+    height: 100vh; /* Takes up the full height of the screen */
+    z-index: -1;   /* Keeps the flowers BEHIND your text and tabs */
+    pointer-events: none; /* Crucial! Prevents the invisible edges of the image from blocking clicks on your tabs */
+    background-size: contain;
+    background-repeat: repeat-y; /* Repeats down the page, or change to no-repeat to just show once */
+}
+
+.border-left {
+    left: 0;
+    /* Replace this URL with your transparent PNG of a Protea/Fynbos arrangement */
+    background-image: url('images/left-floral.png'); 
+    background-position: left center;
+}
+
+.border-right {
+    right: 0;
+    /* Replace this URL with your transparent PNG */
+    background-image: url('border1.png');
+    background-position: right center;
+    /* This flips the left image so it perfectly mirrors on the right! */
+    transform: scaleX(-1); 
+}
+
+/* Hide on mobile phones so it doesn't squish your content! */
+@media (max-width: 1000px) {
+    .side-border {
+        display: none; 
+    }
+}
