@@ -98,7 +98,7 @@ nav {
 /* HERO SECTION */
 .hero {
     /* NOTICE "top center/cover" - This forces the top of the photo to never be cut off! */
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero2.png') top center/cover;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero3.jpeg') top center/cover;
     
     /* Makes the photo take up the full front page */
     min-height: calc(100vh - 60px); 
@@ -230,7 +230,7 @@ input[type="text"], input[type="email"], select, textarea {
 /* --- INNER PAGE BACKGROUND --- */
 body.inner-page-bg {
     /* Put your background image link here! (I added a soft, muted mountain/nature texture as a placeholder) */
-    background-image: url('images/background2.png');
+    background-image: url('images/background3.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Creates a beautiful parallax gliding effect */
