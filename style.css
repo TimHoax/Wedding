@@ -211,33 +211,39 @@ input[type="text"], input[type="email"], select, textarea {
 .side-border {
     position: fixed;
     top: 0;
-    width: 200px;  /* How wide the floral border is */
-    height: 100vh; /* Takes up the full height of the screen */
-    z-index: -1;   /* Keeps the flowers BEHIND your text and tabs */
-    pointer-events: none; /* Crucial! Prevents the invisible edges of the image from blocking clicks on your tabs */
-    background-size: contain;
-    background-repeat: repeat-y; /* Repeats down the page, or change to no-repeat to just show once */
+    width: 300px;  /* 1.5x wider (was 200px) */
+    height: 100vh; 
+    z-index: 0;   
+    pointer-events: none; 
+    background-color: white; /* Makes the entire column solid white */
+    
+    /* Optional: Adds a subtle shadow so the white border pops against the off-white background */
+    box-shadow: 0 0 15px rgba(0,0,0,0.08); 
+    
+    background-size: 100% auto; /* Stretches the image perfectly to fit the new 300px width */
+    background-repeat: repeat-y; 
 }
 
 .border-left {
     left: 0;
-    /* Replace this URL with your transparent PNG of a Protea/Fynbos arrangement */
+    /* Put your image link here */
     background-image: url('images/border1.png'); 
-    background-position: left center;
+    background-position: top center;
 }
 
 .border-right {
     right: 0;
-    /* Replace this URL with your transparent PNG */
+    /* Put your image link here */
     background-image: url('images/border1.png');
-    background-position: right center;
-    /* This flips the left image so it perfectly mirrors on the right! */
-    transform: scaleX(-1); 
+    background-position: top center;
+    transform: scaleX(-1); /* This flips the entire right column so it mirrors the left! */
 }
 
 /* Hide on mobile phones so it doesn't squish your content! */
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .side-border {
         display: none; 
     }
+}
+
 }
