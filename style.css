@@ -207,40 +207,11 @@ input[type="text"], input[type="email"], select, textarea {
     font-size: 1.1rem;
 }
 
-/* --- FIXED SIDE FLORALS (SINGLE LARGE IMAGE) --- */
-.side-border {
-    position: fixed;
-    bottom: 0;     /* Anchors the flowers to the bottom of the screen */
-    width: 350px;  /* Makes them nice and big! */
-    height: 90vh;  /* Gives the image plenty of room to stretch up */
-    z-index: 1;    /* Keeps them above the background, but behind your text boxes */
-    pointer-events: none; 
-    
-    /* THE MAGIC RULES: */
-    background-size: contain;     /* Forces the image to be as large as possible without getting cut off */
-    background-repeat: no-repeat; /* STOPS the repeating! Just one instance. */
-}
-
-.border-left {
-    left: 0;
-    /* Put your image link here */
-    background-image: url('images/border1.png'); 
-    background-position: bottom left; /* Pushes the image tightly into the bottom left corner */
-}
-
-.border-right {
-    right: 0;
-    /* Put your image link here */
-    background-image: url('images/border1.png');
-    background-position: bottom right; /* Pushes the image tightly into the bottom right corner */
-    transform: scaleX(-1); /* Flips the right image perfectly */
-}
-
-/* Still hides on mobile phones so it doesn't squish your content! */
-@media (max-width: 1100px) {
-    .side-border {
-        display: none; 
-    }
-}
-
+/* --- INNER PAGE BACKGROUND --- */
+body.inner-page-bg {
+    /* Put your background image link here! (I added a soft, muted mountain/nature texture as a placeholder) */
+    background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates a beautiful parallax gliding effect */
 }
