@@ -119,12 +119,14 @@
 <!-- RSVP TAB -->
     <section id="rsvp" class="tab-content container">
         <h2 style="text-align: center;">RSVP</h2>
-        <p style="text-align: center; margin-bottom: 25px;">Please RSVP by 1 July 2026 at the latest, although if you already know you’re coming to celebrate with us (or not), we’d really appreciate hearing from you sooner.</p>
+        
+        <!-- Added an ID here so we can hide it later! -->
+        <p id="rsvp-intro" style="text-align: center; margin-bottom: 25px;">Please RSVP by 1 July 2026 at the latest, although if you already know you’re coming to celebrate with us (or not), we’d really appreciate hearing from you sooner.</p>
         
         <!-- THE FORM -->
         <form action="https://formspree.io/f/xzdkeyvq" method="POST" id="rsvp-form">
             
-            <label>Guest Name:</label>
+            <label>Primary Guest Name:</label>
             <input type="text" name="name" required>
 
             <label>Email Address:</label>
@@ -137,10 +139,9 @@
                 <option value="No">Regretfully Declines</option>
             </select>
 
-            <!-- Extra Details (Hidden until "Yes" is selected) -->
+            <!-- Extra Details -->
             <div id="extra-questions" style="display: none; margin-top: 15px;">
-                
-                <label>Total number of guests attending (please only include invited guests):</label>
+                <label>Total number of guests attending:</label>
                 <select name="guest_count" id="guest-count">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -163,10 +164,11 @@
             <button type="submit" class="btn" id="submit-btn">Submit RSVP</button>
         </form>
 
-        <!-- CUSTOM SUCCESS MESSAGE (Hidden by default) -->
+        <!-- CUSTOM SUCCESS MESSAGE -->
         <div id="rsvp-success" style="display: none; text-align: center; padding: 40px 20px;">
             <h3 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 10px;">Thank You!</h3>
-            <p>Your RSVP has been successfully received. We can't wait to celebrate with you!</p>
+            <!-- Added an ID here so the Javascript can change the words based on Yes/No -->
+            <p id="success-message">Your RSVP has been successfully received.</p>
         </div>
     </section>
         
