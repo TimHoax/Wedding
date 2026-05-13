@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // --- 4. PASSWORD PROTECTION LOGIC ---
 function checkPassword() {
     const input = document.getElementById("guest-password").value;
-    const correctPassword = "Fynbos2026"; 
+    const correctPassword = "Meraki"; 
 
     if (input === correctPassword) {
         document.getElementById("password-overlay").style.display = "none";
