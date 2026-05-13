@@ -121,33 +121,53 @@
         <h2 style="text-align: center;">RSVP</h2>
         <p style="text-align: center; margin-bottom: 25px;">Please RSVP by 1 July 2026 at the latest, although if you already know you’re coming to celebrate with us (or not), we’d really appreciate hearing from you sooner.</p>
         
-        <!-- REPLACE YOUR_FORMSPREE_ID when you sign up for Formspree -->
-        <form action="https://formspree.io/f/xzdkeyvq" method="POST" id="rsvp-form">
+        <!-- THE FORM -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="rsvp-form">
             
-            <label>Full Name(s):</label>
+            <label>Primary Guest Name:</label>
             <input type="text" name="name" required>
 
             <label>Email Address:</label>
             <input type="email" name="email" required>
 
-            <label>Will you be attending?</label>
+            <label>Will your party be attending?</label>
             <select name="attending" id="attending-select" required>
                 <option value="">-- Please Select --</option>
                 <option value="Yes">Joyfully Accepts</option>
                 <option value="No">Regretfully Declines</option>
             </select>
 
-            <!-- Dietary & Song Sections (Hidden until they select "Yes") -->
+            <!-- Extra Details (Hidden until "Yes" is selected) -->
             <div id="extra-questions" style="display: none; margin-top: 15px;">
+                
+                <label>Total number of guests attending:</label>
+                <select name="guest_count" id="guest-count">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+
+                <label>Names of all attending guests:</label>
+                <textarea name="guest_names" rows="2" placeholder="Please list all names. If bringing children, please include their ages."></textarea>
+
                 <label>Dietary Requirements:</label>
-                <textarea name="dietary_requirements" rows="2" placeholder="Please list any allergies or restrictions"></textarea>
+                <textarea name="dietary_requirements" rows="2" placeholder="Please list any allergies or restrictions per guest"></textarea>
 
                 <label>What song will get you on the dancefloor?</label>
                 <input type="text" name="song_request" placeholder="Song title & artist">
             </div>
 
-            <button type="submit" class="btn">Submit RSVP</button>
+            <button type="submit" class="btn" id="submit-btn">Submit RSVP</button>
         </form>
+
+        <!-- CUSTOM SUCCESS MESSAGE (Hidden by default) -->
+        <div id="rsvp-success" style="display: none; text-align: center; padding: 40px 20px;">
+            <h3 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 10px;">Thank You!</h3>
+            <p>Your RSVP has been successfully received. We can't wait to celebrate with you!</p>
+        </div>
     </section>
         
     </div> <!-- Close the main-website div right before the closing </body> tag -->
