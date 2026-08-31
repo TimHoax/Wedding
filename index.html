@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"> <!-- Hides site from Google -->
+    <meta name="color-scheme" content="light only"> <!-- Prevents forced Dark Mode -->
     <title>Our Wedding</title>
-    <meta name="color-scheme" content="light only">
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css?v=2">
+    
     <!-- Easy Font Customization via Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <!-- FIXED FLORAL BORDERS -->
+    <div class="side-border border-left"></div>
+    <div class="side-border border-right"></div>
+
     <!-- THE PASSWORD SCREEN -->
     <div id="password-overlay">
         <div class="password-box">
@@ -25,155 +32,183 @@
 
     <!-- WRAP THE REST OF THE SITE IN THIS DIV -->
     <div id="main-website" style="display: none;">
-    
-    <!-- Navigation / Tabs -->
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#" class="tab-link active" data-target="home">Home</a></li>
-            <li><a href="#" class="tab-link" data-target="faq">FAQ</a></li>
-            <li><a href="#" class="tab-link" data-target="story">Our Story</a></li>
-            <li><a href="#" class="tab-link" data-target="schedule">Schedule</a></li>
-            <li><a href="#" class="tab-link" data-target="location">Location</a></li> 
-            <li><a href="#" class="tab-link" data-target="accommodation">Accommodation</a></li>
-            <li><a href="#" class="tab-link" data-target="rsvp">RSVP</a></li>
+
+        <!-- Navigation / Tabs -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="tab-link active" data-target="home">Home</a></li>
+                
+                <!-- RSVP TAB COMMENTED OUT 
+                <li><a href="#" class="tab-link" data-target="rsvp">RSVP</a></li> 
+                -->
+
+                <li><a href="#" class="tab-link" data-target="story">Our Story</a></li>
+                <li><a href="#" class="tab-link" data-target="schedule">Schedule</a></li>
+                <li><a href="#" class="tab-link" data-target="location">Location</a></li>
+                <li><a href="#" class="tab-link" data-target="accommodation">Accommodation</a></li>
+                <li><a href="#" class="tab-link" data-target="faq">FAQ</a></li>
+                <li><a href="#" class="tab-link" data-target="gifts">Gifts</a></li>
+            </ul>
+        </nav>
+
+        <!-- HOME TAB -->
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <h1>Kylie & Alex</h1>
+                <p class="subtitle">Noupoort Mountain Estate</p>
+                <!-- RSVP Button removed since RSVP is closed -->
+            </div>
+        </section>
+
+        <!-- RSVP TAB CONTENT (COMMENTED OUT) -->
+        <!-- 
+        <section id="rsvp" class="tab-content container">
+            <h2 style="text-align: center;">RSVP</h2>
+            <p id="rsvp-intro" style="text-align: center; margin-bottom: 25px;">Please RSVP by 1 July 2026 at the latest...</p>
             
-        </ul>
-    </nav>
-
-    <!-- HOME TAB -->
-    <section id="home" class="tab-content active">
-        <div class="hero">
-            <!-- Replace with your own image URL in CSS -->
-            <h1>Carl & Kylie</h1>
-            <p class="subtitle">December 31, 2026 • Noupoort Mountain Estate, Piketberg</p>
-            <button class="btn" onclick="document.querySelector('[data-target=\'rsvp\']').click()">RSVP Now</button>
-        </div>
-    </section>
-
-<!-- FAQ TAB -->
-    <section id="faq" class="tab-content container" style="text-align: center;">
-        <h2 style="margin-bottom: 20px;">More Details to Come</h2>
-        
-        <p>Please RSVP by 1 July 2026 at the latest, although if you already know you’re coming to celebrate with us (or not), we’d really appreciate hearing from you sooner.</p>
-        
-        <p style="margin-top: 15px;">Once numbers start to be confirmed, we’ll share more details regarding onsite and offsite accommodation options, special rates, FAQs, and detailed directions!</p>
-        
-        <!-- I made this part italic and in your Fynbos green to make it stand out nicely -->
-        <p style="margin-top: 20px; font-style: italic; color: var(--primary-color);">
-            We also wanted to mention that the Noupoort Mountain Estate website is currently being updated. We’ll keep you posted as soon as it’s live again and bookings can officially be made.
-        </p>
-    </section>
-        
-<!-- OUR STORY TAB -->
-    <section id="story" class="tab-content container" style="text-align: center;">
-        <h2>Our Story</h2>
-        
-        <p style="font-size: 1.2rem; font-family: var(--heading-font); font-style: italic; margin-top: 30px; color: var(--primary-color);">
-            Ten years of love, adventures and happiness...
-        </p>
-        
-        <p style="margin-top: 15px;">
-            Watch this space for more of our story, coming soon!
-        </p>        
-    </section>
-
-<!-- SCHEDULE TAB -->
-    <section id="schedule" class="tab-content container">
-        <h2 style="text-align: center;">Order of the Day</h2>
-        
-        <div class="event" style="text-align: center; margin-top: 30px;">
-            <p><strong>The Ceremony</strong><br>4:00 pm</p>
-            
-            <p style="margin-top: 15px;">We kindly ask guests to arrive by 3:30 pm to allow ample time for anyone who may have difficulty finding the venue, and to ensure everyone is comfortably seated by 3:45 pm.</p>
-            
-            <!-- This creates a delicate little dividing line between ceremony and reception -->
-            <hr style="border: 0; border-top: 1px solid var(--accent-color); width: 40px; margin: 30px auto;">
-            
-            <p><strong>The Reception</strong></p>
-            
-            <p style="margin-top: 15px;">Following the ceremony, please join us for a cocktail hour, dinner, drinks, and dancing the night away to celebrate our love and bring in the New Year!</p>
-        </div>
-    </section>
-
-<!-- LOCATION TAB -->
-    <section id="location" class="tab-content container">
-        <h2>Venue & Location</h2>
-        <p><strong>Noupoort Mountain Accommodation, Wedding and Conference Estate</strong></p>
-        <p>We are thrilled to celebrate with you at this beautiful mountain estate. The ceremony and reception will both take place here.</p>
-        
-        <!-- Google Maps Embed -->
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.6134503352914!2d18.63947897566316!3d-32.787683473659186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c33287fc42515bf%3A0x8bdb0666042861c0!2sNoupoort%20Mountain%20Accommodation%2C%20Wedding%20and%20Conference%20Estate!5e1!3m2!1sen!2suk!4v1776110689664!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <h3>Parking & Directions</h3>
-        <p>Detailed directions to be provided to those who have RSVPed.</p>
-    </section>
-    
-    <!-- ACCOMMODATION TAB -->
-    <section id="accommodation" class="tab-content container">
-        <h2>Accommodation</h2>
-        <p>We are currently in the process of confirming RSVP numbers to support our planning. Once these have been finalised, we will share further details regarding on-site and off-site accommodation booking options.</p>
-    </section>
-
-<!-- RSVP TAB -->
-    <section id="rsvp" class="tab-content container">
-        <h2 style="text-align: center;">RSVP</h2>
-        
-        <!-- Added an ID here so we can hide it later! -->
-        <p id="rsvp-intro" style="text-align: center; margin-bottom: 25px;">Please RSVP by 1 July 2026 at the latest, although if you already know you’re coming to celebrate with us (or not), we’d really appreciate hearing from you sooner.</p>
-        
-        <!-- THE FORM -->
-        <form action="https://formspree.io/f/xzdkeyvq" method="POST" id="rsvp-form">
-            
-            <label>Guest Name:</label>
-            <input type="text" name="name" required>
-
-            <label>Email Address:</label>
-            <input type="email" name="email" required>
-
-            <label>Will your party be attending?</label>
-            <select name="attending" id="attending-select" required>
-                <option value="">-- Please Select --</option>
-                <option value="Yes">Joyfully Accepts</option>
-                <option value="No">Regretfully Declines</option>
-            </select>
-
-            <!-- Extra Details -->
-            <div id="extra-questions" style="display: none; margin-top: 15px;">
-                <label>Total number of guests attending (only include invited guests):</label>
-                <select name="guest_count" id="guest-count">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="rsvp-form">
+                <label>Primary Guest Name:</label>
+                <input type="text" name="name" required>
+                <label>Email Address:</label>
+                <input type="email" name="email" required>
+                <label>Will your party be attending?</label>
+                <select name="attending" id="attending-select" required>
+                    <option value="">-- Please Select --</option>
+                    <option value="Yes">Joyfully Accepts</option>
+                    <option value="No">Regretfully Declines</option>
                 </select>
+                <div id="extra-questions" style="display: none; margin-top: 15px;">
+                    <label>Total number of guests attending:</label>
+                    <select name="guest_count" id="guest-count">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <label>Names of all attending guests:</label>
+                    <textarea name="guest_names" rows="2"></textarea>
+                    <label>Dietary Requirements:</label>
+                    <textarea name="dietary_requirements" rows="2"></textarea>
+                    <label>What song will get you on the dancefloor?</label>
+                    <input type="text" name="song_request">
+                </div>
+                <button type="submit" class="btn" id="submit-btn">Submit RSVP</button>
+            </form>
+            <div id="rsvp-success" style="display: none; text-align: center; padding: 40px 20px;">
+                <h3 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 10px;">Thank You!</h3>
+                <p id="success-message">Your RSVP has been successfully received.</p>
+            </div>
+        </section> 
+        -->
 
-                <label>Names of all attending guests:</label>
-                <textarea name="guest_names" rows="2" placeholder="Please list all names. If bringing children, please include their ages."></textarea>
+        <!-- OUR STORY TAB -->
+        <section id="story" class="tab-content container" style="text-align: center;">
+            <h2>Our Story</h2>
+            <p style="font-size: 1.2rem; font-family: var(--heading-font); font-style: italic; margin-top: 30px; color: var(--primary-color);">
+                Ten years of love, adventures and happiness...
+            </p>
+            <p style="margin-top: 15px;">
+                Watch this space for more of our story, coming soon!
+            </p>
+            <img src="https://images.unsplash.com/photo-1583939000140-6927598c1995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Couple in the mountains" class="responsive-img" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 30px;">
+        </section>
 
-                <label>Dietary Requirements:</label>
-                <textarea name="dietary_requirements" rows="2" placeholder="Please list any allergies or restrictions per guest"></textarea>
+        <!-- SCHEDULE TAB -->
+        <section id="schedule" class="tab-content container">
+            <h2 style="text-align: center;">Order of the Day</h2>
+            
+            <div class="event" style="text-align: center; margin-top: 30px;">
+                <p><strong>The Ceremony</strong><br>4:00 pm</p>
+                <p style="margin-top: 15px;">We kindly ask guests to arrive by 3:30 pm to allow ample time for anyone who may have difficulty finding the venue, and to ensure everyone is comfortably seated by 3:45 pm.</p>
+                
+                <hr style="border: 0; border-top: 1px solid var(--accent-color); width: 40px; margin: 30px auto;">
+                
+                <p><strong>The Reception</strong></p>
+                <p style="margin-top: 15px;">Following the ceremony, please join us for a cocktail hour, dinner, drinks, and dancing the night away to celebrate our love and bring in the New Year!</p>
+            </div>
+        </section>
 
-                <label>What song will get you on the dancefloor?</label>
-                <input type="text" name="song_request" placeholder="Song title & artist">
+        <!-- LOCATION TAB -->
+        <section id="location" class="tab-content container">
+            <h2>Venue & Location</h2>
+            <p><strong>Noupoort Mountain Accommodation, Wedding and Conference Estate</strong></p>
+            <p>We are thrilled to celebrate with you at this beautiful mountain estate. The ceremony and reception will both take place here.</p>
+            
+            <!-- Google Maps Embed -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.6134503352914!2d18.63947897566316!3d-32.787683473659186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c33287fc42515bf%3A0x8bdb0666042861c0!2sNoupoort%20Mountain%20Accommodation%2C%20Wedding%20and%20Conference%20Estate!5e1!3m2!1sen!2suk!4v1776110689664!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <button type="submit" class="btn" id="submit-btn">Submit RSVP</button>
-        </form>
+            <h3>Parking & Directions</h3>
+            <p>Detailed directions to be provided to those who have RSVPed.</p>
+        </section>
 
-        <!-- CUSTOM SUCCESS MESSAGE -->
-        <div id="rsvp-success" style="display: none; text-align: center; padding: 40px 20px;">
-            <h3 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 10px;">Thank You!</h3>
-            <!-- Added an ID here so the Javascript can change the words based on Yes/No -->
-            <p id="success-message">Your RSVP has been successfully received.</p>
-        </div>
-    </section>
-        
-    </div> <!-- Close the main-website div right before the closing </body> tag -->
-    
+        <!-- ACCOMMODATION TAB -->
+        <section id="accommodation" class="tab-content container">
+            <h2>Accommodation</h2>
+            <p><strong>Noupoort Mountain Estate</strong></p>
+            <p>Please check the FAQ tab for important updates regarding accommodation and the venue website!</p>
+        </section>
+
+        <!-- FAQ TAB -->
+        <section id="faq" class="tab-content container" style="text-align: center;">
+            <h2 style="margin-bottom: 20px;">More Details to Come</h2>
+            <p>We’re currently finalising RSVP numbers to help with planning our big day. Please RSVP by 1 July 2026 at the latest, although if you already know you’re coming to celebrate with us (or not), we’d really appreciate hearing from you sooner.</p>
+            <p style="margin-top: 15px;">Once numbers start to be confirmed, we’ll share more details regarding onsite and offsite accommodation options, special rates, FAQs, and detailed directions!</p>
+            <p style="margin-top: 20px; font-style: italic; color: var(--primary-color);">
+                We also wanted to mention that the Noupoort Mountain Estate website is currently being updated. We’ll keep you posted as soon as it’s live again and bookings can officially be made.
+            </p>
+        </section>
+
+        <!-- GIFTS TAB -->
+        <section id="gifts" class="tab-content container">
+            <h2 style="text-align: center; margin-bottom: 20px;">Gifts</h2>
+            
+            <p style="text-align: center; font-family: var(--heading-font); font-size: 1.2rem; font-style: italic; color: var(--primary-color);">
+                Your presence at our wedding is the greatest gift we could ask for!
+            </p>
+            
+            <p style="margin-top: 20px; text-align: center;">
+                However, if you would like to mark the occasion with an optional gift, as we will be returning to London after the celebrations, transporting gifts home may be a challenge and therefore we would be incredibly grateful for a contribution towards our honeymoon fund and future adventures together.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;">
+                
+                <!-- South African Bank Box -->
+                <div style="background: rgba(255,255,255,0.6); padding: 25px; border-radius: 8px; border-top: 3px solid var(--accent-color); flex: 1; min-width: 260px;">
+                    <h3 style="margin-bottom: 15px; text-align: center;">South African</h3>
+                    <p style="line-height: 1.8;">
+                        <strong>Bank:</strong> Capitec<br>
+                        <strong>Account Holder:</strong> MISS KYLIE TREGONING<br>
+                        <strong>Account Type:</strong> Main Account<br>
+                        <strong>Account number/IBAN:</strong> 1777743964<br>
+                        <strong>SWIFT/BIC number:</strong> CABLZAJJ<br>
+                        <strong>Branch Code:</strong> 470010
+                    </p>
+                </div>
+                
+                <!-- UK Bank Box -->
+                <div style="background: rgba(255,255,255,0.6); padding: 25px; border-radius: 8px; border-top: 3px solid var(--accent-color); flex: 1; min-width: 260px;">
+                    <h3 style="margin-bottom: 15px; text-align: center;">UK</h3>
+                    <p style="line-height: 1.8;">
+                        <strong>Name:</strong> Kylie Tregoning<br>
+                        <strong>Bank:</strong> Monzo Bank<br>
+                        <strong>Account number:</strong> 67127810<br>
+                        <strong>Sort code:</strong> 04-00-04<br>
+                        <strong>IBAN:</strong> GB93MONZ04000467127810<br>
+                        <strong>BIC:</strong> MONZGB2L
+                    </p>
+                </div>
+
+            </div>
+            
+            <p style="margin-top: 30px; text-align: center; font-style: italic;">
+                We'd love to know who to toast to so if you make a contribution, please include your name in the payment reference or send us a quick message so we know who to thank.
+            </p>
+        </section>
+
+    </div> <!-- Close main-website div -->
+
     <script src="script.js"></script>
 </body>
 </html>
