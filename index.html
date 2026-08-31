@@ -38,25 +38,26 @@
             <ul class="nav-links">
                 <li><a href="#" class="tab-link active" data-target="home">Home</a></li>
                 
-                <!-- RSVP TAB COMMENTED OUT 
+                <!-- COMMENTED OUT 
                 <li><a href="#" class="tab-link" data-target="rsvp">RSVP</a></li> 
-                -->
-
                 <li><a href="#" class="tab-link" data-target="story">Our Story</a></li>
-                <li><a href="#" class="tab-link" data-target="schedule">Schedule</a></li>
-                <li><a href="#" class="tab-link" data-target="location">Location</a></li>
                 <li><a href="#" class="tab-link" data-target="accommodation">Accommodation</a></li>
+                                -->
+                <li><a href="#" class="tab-link" data-target="schedule">Schedule</a></li>
+                <li><a href="#" class="tab-link" data-target="dresscode">Dress Code</a></li> 
+                <li><a href="#" class="tab-link" data-target="location">Location</a></li>
                 <li><a href="#" class="tab-link" data-target="faq">FAQ</a></li>
                 <li><a href="#" class="tab-link" data-target="gifts">Gifts</a></li>
             </ul>
         </nav>
 
-        <!-- HOME TAB -->
+<!-- HOME TAB -->
         <section id="home" class="tab-content active">
             <div class="hero">
-                <h1>Kylie & Alex</h1>
-                <p class="subtitle">Noupoort Mountain Estate</p>
-                <!-- RSVP Button removed since RSVP is closed -->
+                <h1>Kylie & Carl</h1>
+                <p class="subtitle">31 December 2026 • Noupoort Mountain Estate</p>
+                
+                <button class="btn" onclick="document.querySelector('[data-target=\'rsvp\']').click()">RSVP Now</button>
             </div>
         </section>
 
@@ -101,7 +102,8 @@
         </section> 
         -->
 
-        <!-- OUR STORY TAB -->
+        <!-- STORY TAB CONTENT (COMMENTED OUT) -->
+        <!-- 
         <section id="story" class="tab-content container" style="text-align: center;">
             <h2>Our Story</h2>
             <p style="font-size: 1.2rem; font-family: var(--heading-font); font-style: italic; margin-top: 30px; color: var(--primary-color);">
@@ -112,6 +114,8 @@
             </p>
             <img src="https://images.unsplash.com/photo-1583939000140-6927598c1995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Couple in the mountains" class="responsive-img" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 30px;">
         </section>
+
+            -->
 
         <!-- SCHEDULE TAB -->
         <section id="schedule" class="tab-content container">
@@ -143,6 +147,36 @@
             <p>Detailed directions to be provided to those who have RSVPed.</p>
         </section>
 
+
+<!-- DRESS CODE TAB -->
+    <section id="dresscode" class="tab-content container" style="text-align: center;">
+        <h2 style="margin-bottom: 20px;">Dress Code</h2>
+        
+        <h3 style="color: var(--primary-color); margin-top: 20px; font-family: var(--heading-font);">Wedding Day: Summer Semi-Formal</h3>
+        <p style="margin-top: 15px;">
+            As it will be a hot summer day, we want our guests to be comfortable and enjoy themselves. Full suits and blazers are not necessary. However, we do ask that you keep it semi-formal, so please avoid shorts, plakkies (flip-flops), jeans, and very short dresses.
+        </p>
+        <p style="margin-top: 15px;">
+            As the venue is located on a mountain, the temperature may drop in the evening; therefore, we do recommend bringing something warm for the night.
+        </p>
+
+        <!-- Delicate dividing line -->
+        <hr style="border: 0; border-top: 1px solid var(--accent-color); width: 40px; margin: 30px auto;">
+
+        <h3 style="color: var(--primary-color); font-family: var(--heading-font);">Colours</h3>
+        <p style="margin-top: 15px;">
+            Wear whatever makes you feel your best. That said, as it is a summer wedding, we would love to see some colour in our photos!
+        </p>
+
+        <!-- Delicate dividing line -->
+        <hr style="border: 0; border-top: 1px solid var(--accent-color); width: 40px; margin: 30px auto;">
+
+        <h3 style="color: var(--primary-color); font-family: var(--heading-font);">Pool</h3>
+        <p style="margin-top: 15px;">
+            There is a swimming pool at the venue, so you are welcome to bring your swimming costume if you would like to make use of it during all the festivities or even for a New Year's swim!
+        </p>
+    </section>
+        
         <!-- ACCOMMODATION TAB -->
         <section id="accommodation" class="tab-content container">
             <h2>Accommodation</h2>
