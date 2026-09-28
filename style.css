@@ -294,3 +294,14 @@ body.inner-page-bg {
     font-family: var(--body-font);
     font-weight: bold;
 }
+
+/* --- THEME IMAGE STYLING --- */
+.theme-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid var(--accent-color); /* The beautiful Protea Pink border */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Soft shadow to match the frosted glass boxes */
+    margin: 25px auto;
+    display: block;
+}
