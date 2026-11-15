@@ -3,21 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow"> <!-- Hides site from Google -->
-    <meta name="color-scheme" content="light only"> <!-- Prevents forced Dark Mode -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="color-scheme" content="light only"> 
     <title>Our Wedding</title>
     
-    <!-- CSS File Link -->
     <link rel="stylesheet" href="style.css?v=2">
-    
-    <!-- Easy Font Customization via Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- FIXED FLORAL BORDERS -->
-    <div class="side-border border-left"></div>
-    <div class="side-border border-right"></div>
 
     <!-- THE PASSWORD SCREEN -->
     <div id="password-overlay">
@@ -37,109 +30,123 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#" class="tab-link active" data-target="home">Home</a></li>
-                
                 <!-- COMMENTED OUT 
                 <li><a href="#" class="tab-link" data-target="rsvp">RSVP</a></li> 
                 <li><a href="#" class="tab-link" data-target="story">Our Story</a></li>
-                <li><a href="#" class="tab-link" data-target="accommodation">Accommodation</a></li>
-                                -->
+                -->
                 <li><a href="#" class="tab-link" data-target="schedule">Schedule</a></li>
                 <li><a href="#" class="tab-link" data-target="dresscode">Dress Code</a></li> 
                 <li><a href="#" class="tab-link" data-target="location">Location</a></li>
+                <li><a href="#" class="tab-link" data-target="accommodation">Accommodation</a></li>
+                <li><a href="#" class="tab-link" data-target="food">Food & Drinks</a></li>
+                <li><a href="#" class="tab-link" data-target="wifi">Wi-Fi</a></li>
                 <li><a href="#" class="tab-link" data-target="faq">FAQ</a></li>
                 <li><a href="#" class="tab-link" data-target="gifts">Gifts</a></li>
             </ul>
         </nav>
 
-<!-- HOME TAB -->
+        <!-- HOME TAB -->
         <section id="home" class="tab-content active">
             <div class="hero">
                 <h1>Kylie & Carl</h1>
                 <p class="subtitle">31 December 2026 • Noupoort Mountain Estate</p>
-               <!-- Home button remove
-                <button class="btn" onclick="document.querySelector('[data-target=\'rsvp\']').click()">RSVP Now</button>
-                -->
             </div>
         </section>
-
-        <!-- RSVP TAB CONTENT (COMMENTED OUT) -->
-        <!-- 
-        <section id="rsvp" class="tab-content container">
-            <h2 style="text-align: center;">RSVP</h2>
-            <p id="rsvp-intro" style="text-align: center; margin-bottom: 25px;">Please RSVP by 1 July 2026 at the latest...</p>
-            
-            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="rsvp-form">
-                <label>Primary Guest Name:</label>
-                <input type="text" name="name" required>
-                <label>Email Address:</label>
-                <input type="email" name="email" required>
-                <label>Will your party be attending?</label>
-                <select name="attending" id="attending-select" required>
-                    <option value="">-- Please Select --</option>
-                    <option value="Yes">Joyfully Accepts</option>
-                    <option value="No">Regretfully Declines</option>
-                </select>
-                <div id="extra-questions" style="display: none; margin-top: 15px;">
-                    <label>Total number of guests attending:</label>
-                    <select name="guest_count" id="guest-count">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                    <label>Names of all attending guests:</label>
-                    <textarea name="guest_names" rows="2"></textarea>
-                    <label>Dietary Requirements:</label>
-                    <textarea name="dietary_requirements" rows="2"></textarea>
-                    <label>What song will get you on the dancefloor?</label>
-                    <input type="text" name="song_request">
-                </div>
-                <button type="submit" class="btn" id="submit-btn">Submit RSVP</button>
-            </form>
-            <div id="rsvp-success" style="display: none; text-align: center; padding: 40px 20px;">
-                <h3 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 10px;">Thank You!</h3>
-                <p id="success-message">Your RSVP has been successfully received.</p>
-            </div>
-        </section> 
-        -->
-
-        <!-- STORY TAB CONTENT (COMMENTED OUT) -->
-        <!-- 
-        <section id="story" class="tab-content container" style="text-align: center;">
-            <h2>Our Story</h2>
-            <p style="font-size: 1.2rem; font-family: var(--heading-font); font-style: italic; margin-top: 30px; color: var(--primary-color);">
-                Ten years of love, adventures and happiness...
-            </p>
-            <p style="margin-top: 15px;">
-                Watch this space for more of our story, coming soon!
-            </p>
-            <img src="https://images.unsplash.com/photo-1583939000140-6927598c1995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Couple in the mountains" class="responsive-img" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 30px;">
-        </section>
-
-            -->
 
         <!-- SCHEDULE TAB -->
         <section id="schedule" class="tab-content container">
             <h2 style="text-align: center;">Order of the Day</h2>
             
-            <div class="event" style="text-align: center; margin-top: 30px;">
-                <p><strong>The Ceremony</strong><br>4:00 pm</p>
-                <p style="margin-top: 15px;">We kindly ask guests to arrive by 3:30 pm to allow ample time for anyone who may have difficulty finding the venue, and to ensure everyone is comfortably seated by 3:45 pm.</p>
+            <!-- KEY TIMES -->
+            <div style="text-align: center; margin-top: 30px;">
+                <h3 style="color: var(--primary-color); font-family: var(--heading-font);">Key Times: Wedding Day</h3>
+                <p><strong>The Ceremony: 4:00 pm</strong></p>
+                <p style="margin-top: 10px;">We kindly ask all guests to arrive by 3:30 pm to allow ample time for anyone who may have difficulty finding the venue, and to ensure everyone is comfortably seated latest by 3:45 pm.</p>
                 
+                <p style="margin-top: 20px;"><strong>The Reception</strong></p>
+                <p style="margin-top: 10px;">Following the ceremony, please join us for a cocktail hour, dinner, drinks, and dancing the night away to celebrate our love and bring in the New Year. The dance floor closes at 2:00 am.</p>
+
                 <hr style="border: 0; border-top: 1px solid var(--accent-color); width: 40px; margin: 30px auto;">
-                
-                <p><strong>The Reception</strong></p>
-                <p style="margin-top: 15px;">Following the ceremony, please join us for a cocktail hour, dinner, drinks, and dancing the night away to celebrate our love and bring in the New Year!</p>
+
+                <h3 style="color: var(--primary-color); font-family: var(--heading-font);">Key Times: Night Before</h3>
+                <p>For those joining for the pizza night we ask you to arrive by 6:30 pm.</p>
             </div>
+
+            <!-- DETAILED TIMELINE -->
+            <hr style="border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 40px 0;">
+            <h3 style="color: var(--primary-color); font-family: var(--heading-font); text-align: center; margin-bottom: 20px;">Detailed Itinerary</h3>
+            
+            <div class="event" style="margin-bottom: 25px;">
+                <h4>30th December 2026</h4>
+                <p><strong>2:00 pm – 6:30 pm</strong> | Check-in</p>
+                <p><strong>6:30 pm</strong> | Pizza Night Meet & Greet</p>
+            </div>
+
+            <div class="event" style="margin-bottom: 25px;">
+                <h4>31st December 2026 | Wedding Day</h4>
+                <p><strong>8:00 am – 10:00 am</strong> | Collect breakfast from reception (onsite guests)</p>
+                <p><strong>10:00 am – 3:30 pm</strong> | Relax, swim, have fun, self-organised lunch and get yourselves wedding-ready!</p>
+                <p><strong>2:00 pm</strong> | Check-in opens for guests arriving today</p>
+                <p><strong>3:30 pm</strong> | Off-site guests to arrive at the venue</p>
+                <p><strong>3:45 pm</strong> | All guests seated in the chapel</p>
+                <p><strong>4:00 pm</strong> | Ceremony begins</p>
+                <p><strong>2:00 am</strong> | Dance floor closes</p>
+            </div>
+
+            <div class="event" style="margin-bottom: 25px;">
+                <h4>1st January 2027</h4>
+                <p><strong>8:00 am – 10:00 am</strong> | Sit-down breakfast in the reception area (onsite guests and offsite guests that request this)</p>
+                <p><strong>11:00 am</strong> | Check-out for guests departing today</p>
+            </div>
+
+            <div class="event">
+                <h4>2nd January 2027</h4>
+                <p><strong>9:00 am</strong> | Check-out for remaining guests</p>
+            </div>
+        </section>
+
+        <!-- DRESS CODE TAB -->
+        <section id="dresscode" class="tab-content container" style="text-align: center;">
+            <h2 style="margin-bottom: 20px;">Dress Code</h2>
+            
+            <h3 style="color: var(--primary-color); margin-top: 20px; font-family: var(--heading-font);">Wedding Day: Summer Semi-Formal</h3>
+            <p style="margin-top: 15px;">
+                As it will be a hot summer day, we want our guests to be comfortable and enjoy themselves. Full suits and blazers are not necessary. However, we do ask that you keep it semi-formal, so please avoid shorts, plakkies (flip-flops), jeans, and very short dresses.
+            </p>
+            <p style="margin-top: 15px;">
+                As the venue is located on a mountain, the temperature may drop in the evening; therefore, we do recommend bringing something warm for the night.
+            </p>
+
+            <hr style="border: 0; border-top: 1px solid var(--accent-color); width: 40px; margin: 30px auto;">
+
+            <h3 style="color: var(--primary-color); font-family: var(--heading-font);">Colours</h3>
+            <p style="margin-top: 15px;">
+                Wear whatever makes you feel your best. That said, as it is a summer wedding, we would love to see some colour in our photos!
+            </p>
+
+            <hr style="border: 0; border-top: 1px solid var(--accent-color); width: 40px; margin: 30px auto;">
+
+            <h3 style="color: var(--primary-color); font-family: var(--heading-font);">Pool</h3>
+            <p style="margin-top: 15px;">
+                There is a swimming pool at the venue, so you are welcome to bring your swimming costume if you would like to make use of it during all the festivities or even for a New Year's swim!
+            </p>
         </section>
 
         <!-- LOCATION TAB -->
         <section id="location" class="tab-content container">
             <h2>Venue & Location</h2>
             <p><strong>Noupoort Mountain Accommodation, Wedding and Conference Estate</strong></p>
-            <p>We are thrilled to celebrate with you at this beautiful mountain estate. The ceremony and reception will both take place here. Please see detailed directions below.</p>
-           
             
+            <p style="margin-top: 15px; font-size: 1.1rem;">
+                <strong>📍 What3Words reference:</strong> <a href="https://w3w.co/blog.overcome.overthrew" target="_blank" style="color: var(--primary-color); font-weight: bold;">///blog.overcome.overthrew</a> for precise navigation.
+            </p>
+
+            <p style="margin-top: 15px;">We are thrilled to celebrate with you at this beautiful mountain estate. <strong>The Ceremony, Reception and Pizza Night take place here.</strong></p>
+            
+            <div style="background-color: rgba(255,255,255,0.5); padding: 15px; border-left: 4px solid var(--accent-color); margin: 20px 0;">
+                <p><strong>Important:</strong> You will receive a gate PIN in order to enter the venue. As we are on top of a mountain there is limited reception, therefore please read the detailed directions below to avoid anyone getting lost!</p>
+            </div>
+
             <!-- Google Maps Embed -->
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.6134503352914!2d18.63947897566316!3d-32.787683473659186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c33287fc42515bf%3A0x8bdb0666042861c0!2sNoupoort%20Mountain%20Accommodation%2C%20Wedding%20and%20Conference%20Estate!5e1!3m2!1sen!2suk!4v1776110689664!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -155,51 +162,169 @@
             <p>Safe travels!</p>
         </section>
 
-
-<!-- DRESS CODE TAB -->
-    <section id="dresscode" class="tab-content container" style="text-align: center;">
-        <h2 style="margin-bottom: 20px;">Dress Code</h2>
-        
-        <h3 style="color: var(--primary-color); margin-top: 20px; font-family: var(--heading-font);">Wedding Day: Summer Semi-Formal</h3>
-        <p style="margin-top: 15px;">
-            As it will be a hot summer day, we want our guests to be comfortable and enjoy themselves. Full suits and blazers are not necessary. However, we do ask that you keep it semi-formal, so please avoid shorts, plakkies (flip-flops), jeans, and very short dresses.
-        </p>
-        <p style="margin-top: 15px;">
-            As the venue is located on a mountain, the temperature may drop in the evening; therefore, we do recommend bringing something warm for the night.
-        </p>
-
-        <!-- Delicate dividing line -->
-        <hr style="border: 0; border-top: 1px solid var(--accent-color); width: 40px; margin: 30px auto;">
-
-        <h3 style="color: var(--primary-color); font-family: var(--heading-font);">Colours</h3>
-        <p style="margin-top: 15px;">
-            Wear whatever makes you feel your best. That said, as it is a summer wedding, we would love to see some colour in our photos!
-        </p>
-
-        <!-- Delicate dividing line -->
-        <hr style="border: 0; border-top: 1px solid var(--accent-color); width: 40px; margin: 30px auto;">
-
-        <h3 style="color: var(--primary-color); font-family: var(--heading-font);">Pool</h3>
-        <p style="margin-top: 15px;">
-            There is a swimming pool at the venue, so you are welcome to bring your swimming costume if you would like to make use of it during all the festivities or even for a New Year's swim!
-        </p>
-    </section>
-        
         <!-- ACCOMMODATION TAB -->
         <section id="accommodation" class="tab-content container">
             <h2>Accommodation</h2>
-            <p><strong>Noupoort Mountain Estate</strong></p>
-            <p>Please check the FAQ tab for important updates regarding accommodation and the venue website!</p>
+            
+            <h3 style="color: var(--primary-color); font-family: var(--heading-font); margin-top: 20px;">Onsite</h3>
+            <ul style="list-style-type: none; padding: 0; line-height: 1.8;">
+                <li><strong>Check-in:</strong> 30th December (Night Before) and 31st December (Wedding Day) at <strong>2:00 pm</strong></li>
+                <li><strong>Check-out:</strong> 1st January at <strong>11:00 am</strong> and 2nd January at <strong>9:00 am</strong></li>
+            </ul>
+            <p style="margin-top: 10px; font-size: 0.95rem; font-style: italic;">Please let the venue know if you need to arrange early check-in or late check-out.</p>
+
+            <div style="margin-top: 20px;">
+                <p><strong>Gate PIN:</strong> You will receive a gate PIN via email before your stay. The PIN is activated 24 hours before your check-in time.</p>
+                <p style="margin-top: 10px;"><strong>ID:</strong> Valid ID/Passport is required at check-in.</p>
+                <p style="margin-top: 10px;"><strong>Invoices:</strong> Everyone should have received communication about the invoices either directly from the venue or from either Kylie or Carl. Please contact Kylie or Carl if not.</p>
+                <p style="margin-top: 10px;"><strong>Towels:</strong> The website for some reason says that there are no towels included in the cabins, however there will be bath towels provided.</p>
+                <p style="margin-top: 10px;"><strong>Smoking:</strong> Smoking is strictly prohibited inside all rooms.</p>
+                <p style="margin-top: 10px;"><strong>Food & Drinks:</strong> Refer to the Food and Drinks section for breakfast information. There are fridges and plenty of braais so bring whatever food and drinks you would like, however we ask for this to not be consumed near the "venue" section. Any breach of this rule will result in immediate termination of the stay without refund. We ask you to please respect this rule.</p>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 30px 0;">
+
+            <h3 style="color: var(--primary-color); font-family: var(--heading-font);">Offsite</h3>
+            <p>Those staying offsite that was organised by the bride or groom would have been contacted to organise transfer of the booking and relating details.</p>
+        </section>
+
+        <!-- FOOD & DRINKS TAB (NEW) -->
+        <section id="food" class="tab-content container">
+            <h2>Food & Drinks</h2>
+            <p style="font-size: 1.1rem; font-family: var(--heading-font); color: var(--primary-color); margin-bottom: 20px;">What food & drinks are included?</p>
+
+            <div class="faq-item">
+                <h3>30th December | Night Before</h3>
+                <p><strong>Food:</strong> Pizza and snacks will be provided at our Meet & Greet.</p>
+                <p><strong>Drinks:</strong> A welcome drink and nightcap will be provided. There will also be a cash bar available for any additional drinks.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>31st December | Wedding Day</h3>
+                <p><strong>Breakfast:</strong> Guests staying on-site can collect a packed continental breakfast from reception between 8:00 am and 10:00 am.</p>
+                <p><strong>Lunch:</strong> Lunch will be self-organised. You’ll have access to your own kitchen areas where you can store or prepare food, or you can take a drive into Piketberg to visit one of the local shops or restaurants. Just make sure you leave yourself plenty of time to get back, get dressed and be seated in the chapel by 3:45 pm!</p>
+                <p><strong>Dinner:</strong> Come hungry! A lovely harvest table, big spit braai and dessert await.</p>
+                <p><strong>Drinks:</strong> We’ll have cocktail hour, wine and sparkling wine on the tables. As we are sadly yet to win the lotto, there will be a cash bar for any further drinks. 🥂</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>1st January | New Year’s Day</h3>
+                <p><strong>Breakfast:</strong> Guests staying on-site will have a full English sit-down breakfast in the reception area between 8:00 am and 10:00 am. If you’re staying off-site and would like to join us for breakfast, please let us know. You’re very welcome to join, but this will be for your own account.</p>
+                <p><strong>After breakfast:</strong> Any further meals will be self-organised. There are plenty of braais available at the venue, and firewood can be pre-ordered from the venue if you’re planning to braai.</p>
+            </div>
+        </section>
+
+        <!-- WI-FI & RECEPTION TAB (NEW) -->
+        <section id="wifi" class="tab-content container">
+            <h2 style="margin-bottom: 20px;">Wi-Fi & Cell Phone Reception</h2>
+            <p>As the venue is tucked away in the mountains, cell phone reception is very limited and there is no Wi-Fi. We hope everyone will use it as an opportunity to disconnect for a little while and enjoy the beautiful surroundings and good company.</p>
+            
+            <p style="margin-top: 15px;">The venue manager, bride and groom will have access to Wi-Fi for organisational and communication purposes and emergencies however we have been specifically asked to not give this to anyone as it will cause the system to bottleneck.</p>
+            
+            <div style="background-color: rgba(255,255,255,0.5); padding: 20px; border-radius: 8px; margin-top: 25px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 10px;">A few things to consider before arriving:</h3>
+                <ul style="margin-left: 20px; line-height: 1.6;">
+                    <li>Let pet sitters, house sitters, family or anyone who may need you know that you may be difficult to contact.</li>
+                    <li>Download any music, movies, TV shows, YouTube videos, podcasts or children’s entertainment you might want during the stay.</li>
+                    <li>If you need reception or supplies, you can drive down the mountain to Piketberg.</li>
+                </ul>
+            </div>
         </section>
 
         <!-- FAQ TAB -->
-        <section id="faq" class="tab-content container" style="text-align: center;">
-            <h2 style="margin-bottom: 20px;">More Details to Come</h2>
-            <p>We’re currently finalising RSVP numbers to help with planning our big day. Please RSVP by 1 July 2026 at the latest, although if you already know you’re coming to celebrate with us (or not), we’d really appreciate hearing from you sooner.</p>
-            <p style="margin-top: 15px;">Once numbers start to be confirmed, we’ll share more details regarding onsite and offsite accommodation options, special rates, FAQs, and detailed directions!</p>
-            <p style="margin-top: 20px; font-style: italic; color: var(--primary-color);">
-                We also wanted to mention that the Noupoort Mountain Estate website is currently being updated. We’ll keep you posted as soon as it’s live again and bookings can officially be made.
-            </p>
+        <section id="faq" class="tab-content container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>Transport</h3>
+                <p>Please be aware that Uber and other ride-hailing services are not available on the mountain, so please plan ahead and be conscious of drinking and driving. If you’re planning to drink and are staying off-site, please arrange alternative transport in advance. We want all our guests to be safe!</p>
+                <p style="margin-top: 10px;">Elmarco Visagie | 061 897 8903 has been recommended as a local transport option by a guest house in Piketberg. We’ll also obtain additional recommendations from the venue and share these with you.</p>
+                <p style="margin-top: 10px;">If you need transport from Cape Town or elsewhere to the venue, please let us know. We’ll happily help coordinate carpooling between guests or provide recommendations for alternative transport.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Kids</h3>
+                <p>We’re so excited that our wedding will be family-friendly and can’t wait to have all the little ones celebrating with us!</p>
+                <p style="margin-top: 10px;">We just ask that parents and guardians please keep an eye on their children throughout the day, particularly during the ceremony, speeches, special dances and other important moments, so that everyone can enjoy them. Once those are done, we absolutely cannot wait to see the kids taking over the dance floor!</p>
+                <p style="margin-top: 10px;">As there is very limited reception and no guest Wi-Fi at the venue, please remember to pre-download any movies, TV shows, games, YouTube videos or other entertainment your children might want during the stay.</p>
+                <p style="margin-top: 10px;"><strong>A little safety note:</strong> There is a swimming pool at the venue which is not covered or enclosed, so please make sure children are closely supervised around the pool at all times.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I bring my pets?</h3>
+                <p>We ask you to please leave your pets at home.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What time do I need to be seated for the wedding ceremony?</h3>
+                <p>3:45 pm</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What time does the dance floor close?</h3>
+                <p>2:00 am</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What time does the pizza night start?</h3>
+                <p>6:30 pm</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What time can I check in?</h3>
+                <p>2:00 pm</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What time is checkout?</h3>
+                <p>11:00 am (1st Jan) and 9:00 am (2nd Jan)</p>
+            </div>
+
+            <!-- HYPERLINKED FAQS (These use javascript to automatically click the correct tab!) -->
+            <div class="faq-item">
+                <h3>What food and drinks are included?</h3>
+                <p><a href="#" onclick="document.querySelector('[data-target=\'food\']').click(); return false;" style="color: var(--accent-color); font-weight: bold; text-decoration: underline;">FOOD AND DRINKS</a></p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What should I wear?</h3>
+                <p><a href="#" onclick="document.querySelector('[data-target=\'dresscode\']').click(); return false;" style="color: var(--accent-color); font-weight: bold; text-decoration: underline;">DRESS CODE</a></p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Where can I stay?</h3>
+                <p><a href="#" onclick="document.querySelector('[data-target=\'accommodation\']').click(); return false;" style="color: var(--accent-color); font-weight: bold; text-decoration: underline;">ACCOMMODATION</a></p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I smoke?</h3>
+                <p>There is a dedicated smoking area at the reception venue and strictly no smoking in cabins.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I bring my own alcohol?</h3>
+                <p>No alcoholic beverages may be brought onto or in licenced area of the Venue. You will be asked to leave, and this will have cost implications for the bride and groom. You can have this in your cabins and surrounding area.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is there cell phone reception or Wi-Fi?</h3>
+                <p>No, please refer to <a href="#" onclick="document.querySelector('[data-target=\'wifi\']').click(); return false;" style="color: var(--accent-color); font-weight: bold; text-decoration: underline;">WI-FI AND CELL PHONE RECEPTION</a></p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I get there?</h3>
+                <p><a href="#" onclick="document.querySelector('[data-target=\'location\']').click(); return false;" style="color: var(--accent-color); font-weight: bold; text-decoration: underline;">VENUE & LOCATION</a></p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I swim?</h3>
+                <p>Yes, there is a swimming pool at the venue.</p>
+            </div>
+
+            <div class="faq-item" style="border-bottom: none;">
+                <h3>Where is my accommodation invoice?</h3>
+                <p>If you have not received this please contact Carl or Kylie.</p>
+            </div>
         </section>
 
         <!-- GIFTS TAB -->
